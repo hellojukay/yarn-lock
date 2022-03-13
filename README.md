@@ -8,8 +8,7 @@ go get github.com/hellojukay/yarn-lock
 ### example
 
 ```golang
-func main() {
-	lock, err := lock.New("./yarn.lock")
+	lock, err := lock.FromFile("./yarn.lock")
 	if err != nil {
 		panic(err)
 	}
@@ -17,5 +16,4 @@ func main() {
 	for _, c := range components {
 		fmt.Printf("%20s%30s\n", c.Name, c.Version)
 	}
-}
 ```

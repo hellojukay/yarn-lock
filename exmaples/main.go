@@ -3,11 +3,11 @@ package main
 import (
 	"fmt"
 
-	lock "github.com/hellojukay/yarn-lock/pkg"
+	"github.com/hellojukay/yarn-lock/lock"
 )
 
 func main() {
-	lock, err := lock.New("./yarn.lock")
+	lock, err := lock.FromFile("./yarn.lock")
 	if err != nil {
 		panic(err)
 	}

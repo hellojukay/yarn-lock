@@ -5,7 +5,7 @@ import (
 )
 
 func Test_New(t *testing.T) {
-	l, err := FromFile("../testdata/yarn.lock")
+	l, err := FromFile("./testdata/yarn.lock")
 	if err != nil {
 		t.Fail()
 	}
