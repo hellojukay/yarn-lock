@@ -17,15 +17,18 @@ func Test_New(t *testing.T) {
 		t.Fail()
 	}
 	if components[0].Name != "@babel/parser" {
-		t.Fatal("prase Name failed")
+		t.Fatal("parse Name failed")
 	}
 	if components[0].Integrity != "sha512-7yJPvPV+ESz2IUTPbOL+YkIGyCqOyNIzdguKQuJGnH7bg1WTIifuM21YqokFt/THWh1AkCRn9IgoykTRCBVpzA==" {
-		t.Fatal("prase Integrity failed")
+		t.Fatal("parse Integrity failed")
 	}
 	if components[0].Resolved != "https://registry.yarnpkg.com/@babel/parser/-/parser-7.17.3.tgz#b07702b982990bf6fdc1da5049a23fece4c5c3d0" {
 		t.Fail()
 	}
 	if components[0].Version != "7.17.3" {
+		t.Fail()
+	}
+	if len(components) != 21 {
 		t.Fail()
 	}
 }
