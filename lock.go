@@ -3,6 +3,7 @@ package lock
 import (
 	"io/ioutil"
 	"os"
+	"regexp"
 	"strings"
 )
 
@@ -35,7 +36,8 @@ func FromFile(file string) (*Yarn, error) {
 }
 
 func New(content string) (*Yarn, error) {
-	lines := strings.Split(content, "\n")
+	re := regexp.MustCompile(`\r?\n`)
+	lines := re.Split(content, -1)
 	var cs []Component
 	var c Component
 	var dependencies []Dependency
