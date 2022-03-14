@@ -2,7 +2,7 @@
 parse yarn lock file
 
 ```bash
-go get github.com/hellojukay/yarn-lock/yarn
+go get github.com/hellojukay/yarn-lock
 ```
 
 ### example
